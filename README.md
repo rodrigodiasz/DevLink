@@ -27,7 +27,7 @@ A React application for link management, inspired by the Linktree concept. With 
 
 ```bash
 # Clone the repository
-git clone https://github.com/seu-usuario/devlink.git
+git clone https://github.com/rodrigodiasz/devlink.git
 
 # Navigate to the project directory
 cd devlink
