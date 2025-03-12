@@ -1,54 +1,40 @@
-# React + TypeScript + Vite
+# DevLink — Linktree
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application for link management, inspired by the Linktree concept. With DevLink, you can organize, manage, and share your links in a practical and intuitive way.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Link Management**: Create, edit, and delete links easily, keeping everything organized.
+- **Intuitive Navigation**: Use React Router DOM for a smooth navigation experience between pages.
+- **Secure Authentication**: Protected access and user management through Firebase.
+- **Responsive Interface**: Modern and responsive design with TailwindCSS, ensuring a consistent experience on all devices.
 
-## Expanding the ESLint configuration
+## How It Works
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. The user authenticates (or registers) using Firebase Authentication.
+2. After logging in, the user gains access to the management panel, where they can create, edit, and delete links.
+3. The link data is synchronized with the real-time database, enabling a complete CRUD functionality.
+4. The application's navigation is managed by React Router DOM, providing an intuitive and organized user experience.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Technologies Used
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **React**: A library for building user interfaces.
+- **React Router DOM**: For managing routes and navigation between pages.
+- **TailwindCSS**: A CSS framework for styling and responsive design.
+- **Firebase**: A solution for user authentication and database management (CRUD for links).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## How to Get Started
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+# Clone the repository
+git clone https://github.com/seu-usuario/devlink.git
+
+# Navigate to the project directory
+cd devlink
+
+# Install the dependencies
+npm install
+
+# Run the application
+npm start
 ```
